@@ -1,30 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-  <link rel="stylesheet" href="css/app.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
 
 <div class="info">
 
     <h1>Responsive Slider</h1>
+
     <h2>Requirements</h2>
     <p>
         jQuery<br>
         <a href="https://github.com/flesler/jquery.scrollTo" target="_blank">jquery.scrollTo plugin</a><br>
+        <a href="https://github.com/benmajor/jQuery-Touch-Events" target="_blank">jQuery-Touch-Events plugin</a><br>
         Modern browser (not IE 9 or less)
     </p>
+
     <h2>Description</h2>
-    <p>This slider will center the next/previous slide when the viewport is smaller than 4 times the slider height. This is configurable. When the viewport is larger it will slide 70% of the width. This is also configurable.</p>
-    <p>There are callback available before and after the next and previous slide events. Returning false from a before callback will prevent the slide.</p>
-    <p>The actual scrolling is handled by the <a href="https://github.com/flesler/jquery.scrollTo" target="_blank">jquery.scrollTo plugin</a>.</p>
-    <p>If all slides fit in the viewport, the slides are centered on the screen. This can easily be changed in the CSS by changing <code>justify-content: center;</code> on the <code>.slider-track</code>.</p>
-    <p>Slides have a variable width in the example, but you can easily set a fixed width by setting <code>flex-basis</code> on the <code>.slide</code> elements, in pixels or a percentage of the viewport.</p>
-    <p>If there is only one slide and it is wider than the viewport, then the slide will be centered and the arrows will be hidden.</p>
+    <p>
+        This slider will center the next/previous slide when the viewport is smaller than 4 times the slider height.
+        This is configurable. When the viewport is larger it will slide 70% of the width. This is also configurable.
+    </p>
+    <p>
+        There are callback available before and after the next and previous slide events.
+        Returning false from a before callback will prevent the slide.
+    </p>
+    <p>
+        The actual scrolling is handled by the
+        <a href="https://github.com/flesler/jquery.scrollTo" target="_blank">jquery.scrollTo plugin</a>.<br>
+        The touch events are made possible by the
+        <a href="https://github.com/benmajor/jQuery-Touch-Events" target="_blank">jQuery-Touch-Events plugin</a>.
+    </p>
+    <p>
+        If all slides fit in the viewport, the slides are centered on the screen.
+        This can easily be changed in the CSS by changing <code>justify-content: center;</code>
+        on the <code>.slider-track</code>.
+    </p>
+    <p>
+        Slides have a variable width in the example, but you can easily set a fixed width by setting
+        <code>flex-basis</code> on the <code>.slide</code> elements, in pixels or a percentage of the viewport.
+    </p>
+    <p>
+        If there is only one slide and it is wider than the viewport,
+        then the slide will be centered and the arrows will be hidden.
+    </p>
+
     <h2>Demo</h2>
     <p>Try resizing the window.</p>
 
@@ -32,123 +57,123 @@
 
 <div class="slider">
 
-  <a href="#" class="slider-prev">&laquo;</a>
-  <a href="#" class="slider-next">&raquo;</a>
+    <a href="#" class="slider-prev">&laquo;</a>
+    <a href="#" class="slider-next">&raquo;</a>
 
-  <div class="slider-viewport">
-    <div class="slider-track">
+    <div class="slider-viewport">
+        <div class="slider-track">
 
-      <div class="slide">
-        <a href="#">
-          <img src="https://unsplash.it/501/300/">
-        </a>
-      </div>
+            <div class="slide">
+                <a href="#">
+                    <img src="https://unsplash.it/501/300/">
+                </a>
+            </div>
 
-      <div class="slide">
-        <a href="#">
-          <img src="https://unsplash.it/201/300/">
-        </a>
-      </div>
+            <div class="slide">
+                <a href="#">
+                    <img src="https://unsplash.it/201/300/">
+                </a>
+            </div>
 
-      <div class="slide">
-        <a href="#">
-          <img src="https://unsplash.it/301/300/">
-        </a>
-      </div>
+            <div class="slide">
+                <a href="#">
+                    <img src="https://unsplash.it/301/300/">
+                </a>
+            </div>
 
-      <div class="slide">
-        <a href="#">
-          <img src="https://unsplash.it/401/300/">
-        </a>
-      </div>
+            <div class="slide">
+                <a href="#">
+                    <img src="https://unsplash.it/401/300/">
+                </a>
+            </div>
 
-      <div class="slide">
-        <a href="#">
-          <img src="https://unsplash.it/502/300/">
-        </a>
-      </div>
+            <div class="slide">
+                <a href="#">
+                    <img src="https://unsplash.it/502/300/">
+                </a>
+            </div>
 
-      <div class="slide">
-        <a href="#">
-          <img src="https://unsplash.it/202/300/">
-        </a>
-      </div>
+            <div class="slide">
+                <a href="#">
+                    <img src="https://unsplash.it/202/300/">
+                </a>
+            </div>
 
-      <div class="slide">
-        <a href="#">
-          <img src="https://unsplash.it/302/300/">
-        </a>
-      </div>
+            <div class="slide">
+                <a href="#">
+                    <img src="https://unsplash.it/302/300/">
+                </a>
+            </div>
 
-      <div class="slide">
-        <a href="#">
-          <img src="https://unsplash.it/402/300/">
-        </a>
-      </div>
+            <div class="slide">
+                <a href="#">
+                    <img src="https://unsplash.it/402/300/">
+                </a>
+            </div>
 
-      <div class="slide">
-        <a href="#">
-          <img src="https://unsplash.it/503/300/">
-        </a>
-      </div>
+            <div class="slide">
+                <a href="#">
+                    <img src="https://unsplash.it/503/300/">
+                </a>
+            </div>
 
-      <div class="slide">
-        <a href="#">
-          <img src="https://unsplash.it/203/300/">
-        </a>
-      </div>
+            <div class="slide">
+                <a href="#">
+                    <img src="https://unsplash.it/203/300/">
+                </a>
+            </div>
 
-      <div class="slide">
-        <a href="#">
-          <img src="https://unsplash.it/303/300/">
-        </a>
-      </div>
+            <div class="slide">
+                <a href="#">
+                    <img src="https://unsplash.it/303/300/">
+                </a>
+            </div>
 
-      <div class="slide">
-        <a href="#">
-          <img src="https://unsplash.it/403/300/">
-        </a>
-      </div>
+            <div class="slide">
+                <a href="#">
+                    <img src="https://unsplash.it/403/300/">
+                </a>
+            </div>
 
+        </div>
     </div>
-  </div>
 
 </div>
 
 <div class="slider">
 
-  <a href="#" class="slider-prev">&laquo;</a>
-  <a href="#" class="slider-next">&raquo;</a>
+    <a href="#" class="slider-prev">&laquo;</a>
+    <a href="#" class="slider-next">&raquo;</a>
 
-  <div class="slider-viewport">
-    <div class="slider-track">
+    <div class="slider-viewport">
+        <div class="slider-track">
 
-      <div class="slide">
-        <a href="#">
-          <img src="https://unsplash.it/500/300/">
-        </a>
-      </div>
+            <div class="slide">
+                <a href="#">
+                    <img src="https://unsplash.it/500/300/">
+                </a>
+            </div>
 
-      <div class="slide">
-        <a href="#">
-          <img src="https://unsplash.it/200/300/">
-        </a>
-      </div>
+            <div class="slide">
+                <a href="#">
+                    <img src="https://unsplash.it/200/300/">
+                </a>
+            </div>
 
-      <div class="slide">
-        <a href="#">
-          <img src="https://unsplash.it/300/300/">
-        </a>
-      </div>
+            <div class="slide">
+                <a href="#">
+                    <img src="https://unsplash.it/300/300/">
+                </a>
+            </div>
 
-      <div class="slide">
-        <a href="#">
-          <img src="https://unsplash.it/400/300/">
-        </a>
-      </div>
+            <div class="slide">
+                <a href="#">
+                    <img src="https://unsplash.it/400/300/">
+                </a>
+            </div>
 
+        </div>
     </div>
-  </div>
 
 </div>
 

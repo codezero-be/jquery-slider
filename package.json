@@ -13,6 +13,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "benmajor-jquery-touch-events": "^1.0.5",
     "jquery": "^3.2.1",
     "jquery.scrollto": "^2.1.2",
     "laravel-mix": "^0.10.0"

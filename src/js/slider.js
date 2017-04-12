@@ -12,6 +12,7 @@
             atFirstSlide: ".slider-start",
             noSlide: ".no-slide",
             slideSpeed: 500,
+            enableSwipe: true,
 
             // The breakpoint can be an integer or
             // a function that returns an integer.
@@ -83,6 +84,18 @@
                 e.preventDefault();
                 this.slideTo($(this.$slides.get().reverse()), false);
             }.bind(this));
+
+            if (this.options.enableSwipe) {
+                // Swipe left...
+                this.$slider.on('swiperight', function () {
+                    this.slideTo($(this.$slides.get().reverse()), false);
+                }.bind(this));
+
+                // Swipe right...
+                this.$slider.on('swipeleft', function () {
+                    this.slideTo(this.$slides, true);
+                }.bind(this));
+            }
 
             // Window resize event...
             $(window).on('resize', function () {
