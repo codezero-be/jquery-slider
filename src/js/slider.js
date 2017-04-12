@@ -235,7 +235,7 @@
             var trackRemaining = this.slidesTotalWidth - this.getTrackOffset() - 1,
                 slideOverflow = this.getSlideOverflow(this.$slides.last());
 
-            return this.viewportWidth > trackRemaining - slideOverflow;
+            return this.viewportWidth >= trackRemaining - slideOverflow;
         },
 
         getSlideOverflow: function ($slide) {
