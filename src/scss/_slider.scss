@@ -1,0 +1,95 @@
+.slider {
+    position: relative;
+
+    &-prev, &-next {
+        display: flex;
+        position: absolute;
+        z-index: 100;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        bottom: 0;
+        width: 30px;
+        font-size: 50px;
+        color: black;
+        text-decoration: none;
+        background-color: rgba(255,255,255,.5);
+        opacity: 1;
+        transition: opacity 400ms;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    &-prev {
+        left: 0;
+    }
+
+    &-next {
+        right: 0;
+    }
+
+    &-start &-prev {
+        opacity: 0;
+    }
+
+    &-end &-next {
+        opacity: 0;
+    }
+
+    &.no-slide &-prev, &.no-slide &-next {
+        display: none;
+    }
+
+    &-viewport {
+        position: relative;
+        overflow: hidden;
+    }
+
+    &-track {
+        position: relative; // important for sliding to the correct position!
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+    }
+
+    &.no-slide &-track {
+        justify-content: center;
+    }
+}
+
+.slide {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-grow: 0;
+    flex-shrink: 0;
+    //flex-basis: 50%; // fixed slide width (px or % of viewport)
+    max-width: 100%; // don't let slides be wider than the viewport
+    overflow: hidden;
+
+    img {
+        display: block; // clear bottom spacing
+        border: none; // IE 10
+        max-height: 200px;
+    }
+
+    // link hover effect
+    a {
+        display: block;
+        position: relative;
+
+        &:hover::before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1;
+            background: rgba(0,0,0,.6);
+        }
+    }
+}
