@@ -12,7 +12,7 @@ let mix = require('laravel-mix');
  */
 
 mix.js('src/js/app.js', 'public/js/')
-   .extract(['jquery', 'jquery.scrollTo', 'benmajor-jquery-touch-events'])
+   .extract(['jquery', 'jquery.scrollTo'])
    .sass('src/scss/app.scss', 'public/css/')
    .sourceMaps();
 

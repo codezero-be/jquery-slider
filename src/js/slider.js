@@ -171,7 +171,8 @@
 
             var trackOffset = this.getTrackOffset(),
                 halfViewportWidth = this.viewportWidth / 2,
-                slideToOffset = 0;
+                slideToOffset = 0,
+                isPrev = ! isNext;
 
             $slides.each(function (index, slide) {
                 var $slide = $(slide),
@@ -180,12 +181,18 @@
                     rightOffset = leftOffset + slideWidth,
                     visualReferencePoint = (isNext ? leftOffset : rightOffset) - trackOffset,
                     slideIsOverHalfWay = visualReferencePoint > halfViewportWidth,
-                    slideIsBeforeHalfWay = visualReferencePoint < halfViewportWidth;
+                    slideIsBeforeHalfWay = visualReferencePoint < halfViewportWidth,
+                    sliderIsAtStart = trackOffset === 0,
+                    sliderIsAtEnd = trackOffset >= this.slidesTotalWidth - this.viewportWidth,
+                    slideIsNotFirst = leftOffset > 0,
+                    slideIsNotLast = rightOffset < this.slidesTotalWidth;
 
                 slideToOffset = leftOffset + ((slideWidth - this.viewportWidth) / 2);
 
-                if ((isNext && slideIsOverHalfWay) ||
-                 ( ! isNext && slideIsBeforeHalfWay)) {
+                if ( (isNext && sliderIsAtStart && slideIsNotFirst)
+                    || (isPrev && sliderIsAtEnd && slideIsNotLast)
+                    || (isNext && slideIsOverHalfWay)
+                    || (isPrev && slideIsBeforeHalfWay) ) {
                     return false;
                 }
             }.bind(this));
