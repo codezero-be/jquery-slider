@@ -1,12 +1,14 @@
+@import "variables";
+
 .slide {
     display: flex;
     flex-direction: row;
-    justify-content: center; //=> horizontal alignment of the slide content
-    align-items: center; //=> vertical alignment of the slide content
+    justify-content: $slide-content-horizontal-align;
+    align-items: $slide-content-vertical-align;
     flex-grow: 0;
     flex-shrink: 0;
     overflow: hidden;
-    max-width: 100%; //=> don't let slides be wider than the viewport
-    //flex-basis: 50%; //=> optional fixed slide width (px or % of viewport)
-    //height: 200px; //=> optional fixed slide height
+    max-width: $slide-max-width; //=> don't let slides be wider than the viewport
+    flex-basis: $slide-width; //=> optional fixed slide width (px or % of viewport)
+    height: $slide-height; //=> optional fixed slide height
 }

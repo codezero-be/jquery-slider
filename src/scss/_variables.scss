@@ -1,0 +1,24 @@
+/**
+ * Slider
+ */
+
+// slides alignment
+$track-horizontal-align: left !default; //=> choose: center, flex-start (left) or flex-end (right)
+$track-vertical-align: center !default; //=> choose: center, flex-start (top) or flex-end (bottom)
+
+// slides alignment if all slides fit in the viewport
+$track-no-slide-horizontal-align: center !default; //=> choose: center, flex-start (left) or flex-end (right)
+$track-no-slide-vertical-align: $track-vertical-align !default; //=> choose: center, flex-start (top) or flex-end (bottom)
+
+/**
+ * Slides
+ */
+
+// slide content alignment
+$slide-content-horizontal-align: center !default; //=> choose: center, flex-start (left) or flex-end (right)
+$slide-content-vertical-align: center !default; //=> choose: center, flex-start (top) or flex-end (bottom)
+
+// slide width & height
+$slide-max-width: 100% !default; // choose: none (allow any width), 100% (crop slides to fit viewport) or any other width
+$slide-width: auto !default; // choose: auto or any width (in pixels or percentage of viewport)
+$slide-height: auto !default; // choose: auto or any height (in pixels)

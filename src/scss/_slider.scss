@@ -1,3 +1,5 @@
+@import "variables";
+
 .slider {
     position: relative;
 
@@ -10,11 +12,13 @@
         position: relative; //=> !! important for sliding to the correct position !!
         display: flex;
         flex-direction: row;
-        justify-content: left;
-        align-items: center; //=> vertical alignment of the slides if they have variable heights
+        justify-content: $track-horizontal-align;
+        align-items: $track-vertical-align; //=> vertical alignment of slides if they have variable heights
     }
 
+    // alignment of slides if they all fit in the viewport
     &.no-slide &-track {
-        justify-content: center; //=> horizontal alignment if all slides fit in the viewport
+        justify-content: $track-no-slide-horizontal-align;
+        align-items: $track-no-slide-vertical-align;
     }
 }
