@@ -1,0 +1,12 @@
+.slide {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; //=> horizontal alignment of the slide content
+    align-items: center; //=> vertical alignment of the slide content
+    flex-grow: 0;
+    flex-shrink: 0;
+    overflow: hidden;
+    max-width: 100%; //=> don't let slides be wider than the viewport
+    //flex-basis: 50%; //=> optional fixed slide width (px or % of viewport)
+    //height: 200px; //=> optional fixed slide height
+}

@@ -11,13 +11,8 @@ let mix = require('laravel-mix');
  |
  */
 
-mix.js('src/js/app.js', 'public/js/')
-    .extract(['jquery', 'jquery.scrollTo', 'benmajor-jquery-touch-events'])
-    .autoload({
-        jquery: ['$', 'jQuery', 'window.jQuery']
-    })
-    .sass('src/scss/app.scss', 'public/css/')
-    .sourceMaps();
+mix.js('src/js/slider.js', 'public/js/slider.js')
+    .sass('src/scss/app.scss', 'public/css/slider.css');
 
 // Full API
 // mix.js(src, output);

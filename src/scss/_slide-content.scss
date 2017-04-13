@@ -1,0 +1,30 @@
+.slide {
+
+    /**
+     * This is just an example.
+     * You can style the content any way you like.
+     */
+
+    img {
+        display: block; //=> clear bottom spacing
+        border: none; //=> IE 10 ¯\_(ツ)_/¯
+        max-height: 200px;
+    }
+
+    a {
+        display: block;
+        position: relative;
+
+        &:hover::before { //=> link hover effect
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1;
+            background: rgba(0,0,0,.4);
+        }
+    }
+}

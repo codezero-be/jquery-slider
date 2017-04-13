@@ -1,0 +1,40 @@
+.slider {
+
+    /**
+     * This is just an example.
+     * You can style the arrows any way you like.
+     */
+
+    &-prev, &-next {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 30px;
+        z-index: 100;
+        font-size: 50px;
+        color: #000000;
+        text-decoration: none;
+        background-color: rgba(255,255,255,.5);
+        opacity: 1;
+        transition: opacity 400ms;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    &-prev { left: 0; }
+    &-next { right: 0; }
+
+    // arrow state when the slider is at the start or the end
+    &-start &-prev { opacity: 0; }
+    &-end &-next   { opacity: 0; }
+
+    // arrow state when all slides fit in the viewport
+    &.no-slide &-prev, &.no-slide &-next {
+        display: none;
+    }
+}
