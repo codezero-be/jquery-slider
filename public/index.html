@@ -65,11 +65,13 @@
 
     <h2>Description</h2>
     <p>
-        This slider will center the next/previous slide when the viewport is smaller than 4 times the slider height.
-        This is configurable. When the viewport is larger it will slide 70% of the width. This is also configurable.
+        This slider will center the next/previous slide in the viewport,
+        when any slide is wider then 30% of the viewport.
+        Else it will slide 70% of the viewport width.
+        This is configurable.
     </p>
     <p>
-        There are callback available before and after the next and previous slide events.
+        There are callbacks available before and after the next and previous slide events.<br>
         Returning false from a before callback will prevent the slide.
     </p>
     <p>
@@ -90,6 +92,9 @@
     <p>
         If there is only one slide and it is wider than the viewport,
         then the slide will be centered and the arrows will be hidden.
+    </p>
+    <p>
+        You can set variabled in your SCSS file which makes the slider configuration even easier.
     </p>
 
     <h2>Demo</h2>

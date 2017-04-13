@@ -14,17 +14,28 @@
             slideSpeed: 500,
             enableSwipe: true,
 
-            // The breakpoint can be an integer or
-            // a function that returns an integer.
-            singleSlideBreakPoint: function ($slider) {
-                return $slider.height() * 4;
+            // Check if we should enable single slide mode..
+            // Return true to scroll only one slide or false to slide the default distance.
+            // You can also set this to a boolean instead of a function.
+            // By default, if any slide is wider than 30% of the viewport, single slide mode is enabled.
+            isInSingleSlideMode: function ($slider) {
+                var isInSingleSlideMode = false,
+                    viewportWidth = $slider.find(this.viewport).width();
+
+                $slider.find(this.slide).each(function () {
+                    isInSingleSlideMode = $(this).width() / viewportWidth > .3;
+                    return ! isInSingleSlideMode;
+                });
+
+                return isInSingleSlideMode;
             },
 
-            // Slide distance used if the viewport is wider than "singleSlideBreakPoint".
-            // Return any value supported by the jquery.scrollTo plegin:
+            // Slide distance used if "isInSingleSlideMode" is true.
+            // Return any value supported by the jquery.scrollTo plugin:
             // https://github.com/flesler/jquery.scrollTo
+            // By default this will slide 70% of the viewport.
             defaultSlideDistance: function ($slider, $viewport, $track, isNext) {
-                return (isNext ? '+=' : '-=') + ($viewport.width() * .70) + 'px';
+                return (isNext ? '+=' : '-=') + ($viewport.width() * .7) + 'px';
             },
 
             // Before callbacks...
@@ -52,6 +63,7 @@
         this.slidesTotalWidth = 0;
         this.singleSlideIsWiderThanViewport = false;
         this.slidesFitInViewport = false;
+        this.isInSingleSlideMode = false;
         this.noSlideClass = (this.options.noSlide).substr(1);
         this.onResize = null;
 
@@ -120,6 +132,7 @@
             this.slidesTotalWidth = this.getSlidesWidth();
             this.singleSlideIsWiderThanViewport = this.isSingleSlideWiderThanViewport();
             this.slidesFitInViewport = this.checkSlidesFitInViewport();
+            this.isInSingleSlideMode = this.options.isInSingleSlideMode(this.$slider);
         },
 
         updateSlider: function () {
@@ -165,7 +178,7 @@
         },
 
         getSlideToPosition: function ($slides, isNext) {
-            if ( ! this.isInSingleSlideMode()) {
+            if ( ! this.isInSingleSlideMode) {
                 return this.options.defaultSlideDistance(this.$slider, this.$viewport, this.$track, isNext);
             }
 
@@ -217,14 +230,6 @@
 
         isSingleSlideWiderThanViewport: function () {
             return this.$slides.length <= 1 && this.slidesTotalWidth >= this.viewportWidth;
-        },
-
-        isInSingleSlideMode: function () {
-            var breakPoint = (this.options.singleSlideBreakPoint instanceof Function)
-                            ? this.options.singleSlideBreakPoint(this.$slider)
-                            : this.options.singleSlideBreakPoint;
-
-            return this.viewportWidth < breakPoint;
         },
 
         isAFirstSlide: function () {
