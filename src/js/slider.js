@@ -178,21 +178,14 @@
                 var $slide = $(slide),
                     slideWidth = $slide.width(),
                     leftOffset = $slide.position().left,
-                    rightOffset = leftOffset + slideWidth,
-                    visualReferencePoint = (isNext ? leftOffset : rightOffset) - trackOffset,
-                    slideIsOverHalfWay = visualReferencePoint > halfViewportWidth,
-                    slideIsBeforeHalfWay = visualReferencePoint < halfViewportWidth,
-                    sliderIsAtStart = trackOffset === 0,
-                    sliderIsAtEnd = trackOffset >= this.slidesTotalWidth - this.viewportWidth,
-                    slideIsNotFirst = leftOffset > 0,
-                    slideIsNotLast = rightOffset < this.slidesTotalWidth;
+                    slideCenterPosition = leftOffset + (slideWidth / 2) - trackOffset,
+                    slideCenterIsOverHalfWay = slideCenterPosition - 2 > halfViewportWidth,
+                    slideCenterIsBeforeHalfWay = slideCenterPosition + 2 < halfViewportWidth;
 
-                slideToOffset = leftOffset + ((slideWidth - this.viewportWidth) / 2);
+                slideToOffset = leftOffset + ((slideWidth - this.viewportWidth) / 2); //=> Center slide
 
-                if ( (isNext && sliderIsAtStart && slideIsNotFirst)
-                    || (isPrev && sliderIsAtEnd && slideIsNotLast)
-                    || (isNext && slideIsOverHalfWay)
-                    || (isPrev && slideIsBeforeHalfWay) ) {
+                if ( (isNext && slideCenterIsOverHalfWay) ||
+                     (isPrev && slideCenterIsBeforeHalfWay) ) {
                     return false;
                 }
             }.bind(this));
