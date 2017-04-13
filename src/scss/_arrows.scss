@@ -1,40 +1,69 @@
-.slider {
+@import "variables";
 
-    /**
-     * This is just an example.
-     * You can style the arrows any way you like.
-     */
+@if $default-arrow-styles == true {
 
-    &-prev, &-next {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        width: 30px;
-        z-index: 100;
-        font-size: 50px;
-        color: #000000;
-        text-decoration: none;
-        background-color: rgba(255,255,255,.5);
-        opacity: 1;
-        transition: opacity 400ms;
+    .slider {
 
-        &:hover {
+        /**
+         * This is just an example.
+         * You can style the arrows any way you like.
+         */
+
+        @if $place-arrows-over-slides == false {
+            padding-left: $arrow-box-width;
+            padding-right: $arrow-box-width;
+        }
+
+        &-prev, &-next {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            z-index: 100;
+            width: $arrow-box-width;
+            background: $arrow-box-background;
+            font-size: $arrow-font-size;
+            color: $arrow-color;
             text-decoration: none;
+            transition: width 400ms, background 400ms;
+            overflow: hidden;
+
+            &:hover {
+                background: $arrow-box-background-hover;
+                color: $arrow-color-hover;
+                text-decoration: none;
+            }
+        }
+
+        &-prev { left: 0; }
+        &-next { right: 0; }
+
+        // arrow state when the slider is at the start
+        &-start &-prev {
+            background: $arrow-box-background-end;
+            color: $arrow-color-end;
+
+            @if $hide-arrows-at-end-of-track == true {
+                width: 0;
+            }
+        }
+
+        // arrow state when the slider is at the end
+        &-end &-next {
+            background: $arrow-box-background-end;
+            color: $arrow-color-end;
+
+            @if $hide-arrows-at-end-of-track == true {
+                width: 0;
+            }
+        }
+
+        // arrow state when all slides fit in the viewport
+        &.no-slide &-prev, &.no-slide &-next {
+            display: none;
         }
     }
 
-    &-prev { left: 0; }
-    &-next { right: 0; }
-
-    // arrow state when the slider is at the start or the end
-    &-start &-prev { opacity: 0; }
-    &-end &-next   { opacity: 0; }
-
-    // arrow state when all slides fit in the viewport
-    &.no-slide &-prev, &.no-slide &-next {
-        display: none;
-    }
 }

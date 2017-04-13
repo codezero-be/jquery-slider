@@ -21,3 +21,41 @@ $slide-content-vertical-align: center !default; //=> choose: center, flex-start 
 $slide-max-width: 100% !default; // choose: none (allow any width), 100% (crop slides to fit viewport) or any other width
 $slide-width: auto !default; // choose: auto or any width (in pixels or percentage of viewport)
 $slide-height: auto !default; // choose: auto or any height (in pixels)
+
+/**
+ * Default arrow styles
+ */
+
+// use the default arrow styles?
+$default-arrow-styles: true !default;
+
+// should the arrows be placed over the slides
+// or should we add padding to the slider to prevent the overlap?
+$place-arrows-over-slides: true !default;
+
+// hide the previous arrow when at the start of the slider
+// and the next arrow when at the end of the slider?
+$hide-arrows-at-end-of-track: true !default;
+
+// arrow styles
+$arrow-box-width: 30px !default;
+$arrow-font-size: 30px !default;
+
+// normal colors
+$arrow-box-background: rgba(0,0,0,.3) !default;
+$arrow-color: #ffffff !default;
+
+// hover colors
+$arrow-box-background-hover: rgba(0,0,0,.6) !default;
+$arrow-color-hover: #ffdd8a !default;
+
+// end of track colors
+$arrow-box-background-end: rgba(255,255,255,.5) !default;
+$arrow-color-end: #7e7e7e !default;
+
+/**
+ * Default slide content styles
+ */
+
+// use the default slide content styles?
+$default-slide-content-styles: true !default;
