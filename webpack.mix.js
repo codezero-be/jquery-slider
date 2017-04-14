@@ -12,7 +12,7 @@ let mix = require('laravel-mix');
  */
 
 mix.js('src/js/slider.js', 'public/js/slider.js')
-    .sass('src/scss/app.scss', 'public/css/slider.css');
+    .sass('src/scss/main.scss', 'public/css/slider.css');
 
 // Full API
 // mix.js(src, output);
