@@ -40,7 +40,7 @@ $hide-arrows-at-end-of-track: true !default;
 // arrow styles
 $arrow-box-width: 30px !default;
 $arrow-font-size: 30px !default;
-$arrow-transition: width 400ms, background 400ms, color 400ms !default;
+$arrow-transition: width 400ms ease 600ms, background 400ms, color 400ms !default;
 
 // normal colors
 $arrow-box-background: rgba(0,0,0,.3) !default;
