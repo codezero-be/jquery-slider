@@ -55,18 +55,18 @@ $arrow-box-background-end: $arrow-box-background !default;
 $arrow-color-end: #7e7e7e !default;
 
 //
-// Default slide content styles
+// Default slide image styles
 //
 
-// use the default slide content styles?
-$default-slide-content-styles: true !default;
+// use the default slide image styles?
+$default-slide-image-styles: true !default;
 
 // the image max height will determine the slider height
 // if $slide-height is set to auto.
 $slide-image-max-height: 200px !default; //=> choose: none or any value
 
-// text align inside .slide-content
-$slide-content-text-align: center !default; //=> choose: left, center, right
+// text align inside .slide-image
+$slide-image-text-align: center !default; //=> choose: left, center, right
 
 // zoom icon styles
 $slide-zoom-color: rgba(255,255,255,.8) !default;

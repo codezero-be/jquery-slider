@@ -1,18 +1,18 @@
 @import "variables";
 
-@if $default-slide-content-styles == true {
+@if $default-slide-image-styles == true {
 
     .slide {
 
         // This is just an example.
-        // You can style the content any way you like.
+        // You can style the image any way you like.
 
-        &-content {
+        &-image {
             display: block;
             position: relative;
             overflow: hidden;
             transition: transform 400ms;
-            text-align: $slide-content-text-align;
+            text-align: $slide-image-text-align;
 
             &-zoom {
                 display: flex;
@@ -49,7 +49,7 @@
             }
         }
 
-        &-cover-width &-content {
+        &-cover-width &-image {
             width: 100%;
         }
 
@@ -64,7 +64,7 @@
         }
     }
 
-    .slider-cover-width .slide-content {
+    .slider-cover-width .slide-image {
         width: 100%;
     }
 

@@ -11,7 +11,7 @@
             atLastSlide: ".slider-end",
             atFirstSlide: ".slider-start",
             noSlide: ".no-slide",
-            slideContent: ".slide-content",
+            slideImageContainer: ".slide-image",
             slideCover: ".slide-cover",
             slideCoverWrapper: ".slide-cover-wrapper",
             slideSpeed: 500,
@@ -91,11 +91,11 @@
         swapSlideCoverImages: function () {
             this.$slider.find('img' + this.options.slideCover).each(function (index, image) {
                 var $image = $(image),
-                    $slideContent = $image.closest(this.options.slideContent),
+                    $container = $image.closest(this.options.slideImageContainer),
                     imageUrl = $image.prop('src');
 
                 if (imageUrl) {
-                    $slideContent
+                    $container
                         .css('backgroundImage', 'url(' + imageUrl + ')')
                         .addClass((this.options.slideCoverWrapper).substr(1));
                 }
