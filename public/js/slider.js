@@ -204,7 +204,7 @@
             this.slidesTotalWidth = this.getSlidesWidth();
             this.singleSlideIsWiderThanViewport = this.isSingleSlideWiderThanViewport();
             this.slidesFitInViewport = this.checkSlidesFitInViewport();
-            this.isInSingleSlideMode = this.options.isInSingleSlideMode(this.$slider);
+            this.isInSingleSlideMode = this.options.isInSingleSlideMode instanceof Function ? this.options.isInSingleSlideMode(this.$slider) : this.options.isInSingleSlideMode;
         },
 
         updateSlider: function updateSlider() {
