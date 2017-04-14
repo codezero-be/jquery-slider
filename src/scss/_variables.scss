@@ -1,6 +1,6 @@
-/**
- * Slider
- */
+//
+// Slider
+//
 
 // slides alignment
 $track-vertical-align: center !default; //=> choose: center, flex-start (top) or flex-end (bottom)
@@ -9,9 +9,9 @@ $track-vertical-align: center !default; //=> choose: center, flex-start (top) or
 $track-no-slide-horizontal-align: center !default; //=> choose: center, flex-start (left) or flex-end (right)
 $track-no-slide-vertical-align: $track-vertical-align !default; //=> choose: center, flex-start (top) or flex-end (bottom)
 
-/**
- * Slides
- */
+//
+// Slides
+//
 
 // slide content alignment
 $slide-content-horizontal-align: center !default; //=> choose: center, flex-start (left) or flex-end (right)
@@ -22,9 +22,9 @@ $slide-max-width: 100% !default; // choose: none (allow any width), 100% (crop s
 $slide-width: auto !default; // choose: auto or any width (in pixels or percentage of viewport)
 $slide-height: auto !default; // choose: auto or any height (in pixels)
 
-/**
- * Default arrow styles
- */
+//
+// Default arrow styles
+//
 
 // use the default arrow styles?
 $default-arrow-styles: true !default;
@@ -53,9 +53,9 @@ $arrow-color-hover: #ffdd8a !default;
 $arrow-box-background-end: rgba(255,255,255,.5) !default;
 $arrow-color-end: #7e7e7e !default;
 
-/**
- * Default slide content styles
- */
+//
+// Default slide content styles
+//
 
 // use the default slide content styles?
 $default-slide-content-styles: true !default;
