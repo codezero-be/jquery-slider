@@ -7,28 +7,65 @@
         // This is just an example.
         // You can style the content any way you like.
 
-        img {
-            display: block; //=> clear bottom spacing
-            border: none; //=> IE 10 ¯\_(ツ)_/¯
-            max-height: 200px;
-        }
-
-        a {
+        &-content {
             display: block;
             position: relative;
+            overflow: hidden;
+            transition: transform 400ms;
+            text-align: $slide-content-text-align;
 
-            &:hover::before { //=> link hover effect
-                content: '';
-                display: block;
+            &-zoom {
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 position: absolute;
                 top: 0;
                 left: 0;
-                right: 0;
                 bottom: 0;
-                z-index: 1;
-                background: rgba(0,0,0,.4);
+                z-index: 10;
+                width: 0;
+                overflow: hidden;
+                color: $slide-zoom-color;
+                font-size: $slide-zoom-font-size;
+                background: $slide-zoom-background;
+                transition: opacity 400ms, width 0ms linear 400ms;
+                opacity: 0;
+            }
+
+            img {
+                vertical-align: middle;
+                border: none; //=> IE 10 ¯\_(ツ)_/¯
+                max-height: $slide-image-max-height;
+            }
+
+            &:hover {
+                transform: scale(1.2);
+            }
+
+            &:hover &-zoom {
+                transition: opacity 400ms, width 0ms linear 0ms;
+                width: 100%;
+                opacity: 1;
             }
         }
+
+        &-cover-width &-content {
+            width: 100%;
+        }
+
+        &-cover-wrapper {
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+
+            img.slide-cover {
+                opacity: 0;
+            }
+        }
+    }
+
+    .slider-cover-width .slide-content {
+        width: 100%;
     }
 
 }

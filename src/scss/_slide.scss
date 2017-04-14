@@ -3,12 +3,21 @@
 .slide {
     display: flex;
     flex-direction: row;
-    justify-content: $slide-content-horizontal-align;
-    align-items: $slide-content-vertical-align;
+    justify-content: $slide-horizontal-align;
+    align-items: $slide-vertical-align;
     flex-grow: 0;
     flex-shrink: 0;
     overflow: hidden;
     max-width: $slide-max-width; //=> don't let slides be wider than the viewport
     flex-basis: $slide-width; //=> optional fixed slide width (px or % of viewport)
     height: $slide-height; //=> optional fixed slide height
+
+    &-full-width, &-cover-width {
+        flex-basis: 100%;
+    }
+}
+
+.slider-full-width .slide,
+.slider-cover-width .slide {
+    flex-basis: 100%;
 }

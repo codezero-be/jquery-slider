@@ -14,8 +14,8 @@ $track-no-slide-vertical-align: $track-vertical-align !default; //=> choose: cen
 //
 
 // slide content alignment
-$slide-content-horizontal-align: center !default; //=> choose: center, flex-start (left) or flex-end (right)
-$slide-content-vertical-align: center !default; //=> choose: center, flex-start (top) or flex-end (bottom)
+$slide-horizontal-align: center !default; //=> choose: center, flex-start (left) or flex-end (right)
+$slide-vertical-align: center !default; //=> choose: center, flex-start (top) or flex-end (bottom)
 
 // slide width & height
 $slide-max-width: 100% !default; // choose: none (allow any width), 100% (crop slides to fit viewport) or any other width
@@ -60,3 +60,15 @@ $arrow-color-end: #7e7e7e !default;
 
 // use the default slide content styles?
 $default-slide-content-styles: true !default;
+
+// the image max height will determine the slider height
+// if $slide-height is set to auto.
+$slide-image-max-height: 200px !default; //=> choose: none or any value
+
+// text align inside .slide-content
+$slide-content-text-align: center !default; //=> choose: left, center, right
+
+// zoom icon styles
+$slide-zoom-color: rgba(255,255,255,.8) !default;
+$slide-zoom-background: rgba(0,0,0,.2) !default;
+$slide-zoom-font-size: 30px !default;
