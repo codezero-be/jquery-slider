@@ -12,7 +12,7 @@
         position: relative; //=> !! important for sliding to the correct position !!
         display: flex;
         flex-direction: row;
-        justify-content: left;
+        justify-content: flex-start;
         align-items: $track-vertical-align; //=> vertical alignment of slides if they have variable heights
     }
 
