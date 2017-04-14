@@ -25,7 +25,7 @@
             font-size: $arrow-font-size;
             color: $arrow-color;
             text-decoration: none;
-            transition: width 400ms, background 400ms;
+            transition: $arrow-transition;
             overflow: hidden;
 
             &:hover {

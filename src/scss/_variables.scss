@@ -40,6 +40,7 @@ $hide-arrows-at-end-of-track: true !default;
 // arrow styles
 $arrow-box-width: 30px !default;
 $arrow-font-size: 30px !default;
+$arrow-transition: width 400ms, background 400ms, color 400ms !default;
 
 // normal colors
 $arrow-box-background: rgba(0,0,0,.3) !default;
@@ -50,7 +51,7 @@ $arrow-box-background-hover: rgba(0,0,0,.6) !default;
 $arrow-color-hover: #ffdd8a !default;
 
 // end of track colors
-$arrow-box-background-end: rgba(255,255,255,.5) !default;
+$arrow-box-background-end: $arrow-box-background !default;
 $arrow-color-end: #7e7e7e !default;
 
 //
