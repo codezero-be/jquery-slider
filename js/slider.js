@@ -83,6 +83,9 @@
         atLastSlide: ".slider-end",
         atFirstSlide: ".slider-start",
         noSlide: ".no-slide",
+        slideContent: ".slide-content",
+        slideCover: ".slide-cover",
+        slideCoverWrapper: ".slide-cover-wrapper",
         slideSpeed: 500,
         enableSwipe: true,
 
@@ -146,6 +149,7 @@
     Plugin.prototype = {
 
         init: function init() {
+            this.swapSlideCoverImages();
             this.registerEvents();
             this.evaluateSlider();
 
@@ -154,6 +158,18 @@
             setTimeout(function () {
                 this.evaluateSlider();
             }.bind(this), 1000);
+        },
+
+        swapSlideCoverImages: function swapSlideCoverImages() {
+            this.$slider.find('img' + this.options.slideCover).each(function (index, image) {
+                var $image = $(image),
+                    $slideContent = $image.closest(this.options.slideContent),
+                    imageUrl = $image.prop('src');
+
+                if (imageUrl) {
+                    $slideContent.css('backgroundImage', 'url(' + imageUrl + ')').addClass(this.options.slideCoverWrapper.substr(1));
+                }
+            }.bind(this));
         },
 
         registerEvents: function registerEvents() {
