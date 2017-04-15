@@ -1,11 +1,11 @@
 @import "variables";
 
+// This is just an example.
+// You can style the arrows any way you like.
+
 @if $default-arrow-styles == true {
 
     .slider {
-
-        // This is just an example.
-        // You can style the arrows any way you like.
 
         @if $place-arrows-over-slides == false {
             padding-left: $arrow-box-width;

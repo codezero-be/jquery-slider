@@ -1,11 +1,11 @@
 @import "variables";
 
+// This is just an example.
+// You can style the image any way you like.
+
 @if $default-slide-image-styles == true {
 
     .slide {
-
-        // This is just an example.
-        // You can style the image any way you like.
 
         &-image {
             display: block;
