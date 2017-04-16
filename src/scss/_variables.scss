@@ -22,6 +22,16 @@ $slide-max-width: 100% !default; // choose: none (allow any width), 100% (crop s
 $slide-width: auto !default; // choose: auto or any width (in pixels or percentage of viewport)
 $slide-height: 200px !default; // choose: auto or any height (in pixels)
 
+// default slide background
+$slide-background: transparent !default; //=> choose: transparent or any value
+
+// slide default text color
+$slide-text-color: #ffffff !default;
+
+// background for optional slide-overlay div
+// this is meant to be placed in a content slider
+$slide-background-overlay: rgba(0,0,0,.5) !default; //=> choose: transparent or any value
+
 //
 // Default arrow styles
 //

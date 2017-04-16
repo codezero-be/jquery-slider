@@ -1,16 +1,39 @@
 @import "variables";
 
 .slide {
+    position: relative;
     display: flex;
-    flex-direction: row;
-    justify-content: $slide-horizontal-align;
-    align-items: $slide-vertical-align;
+    flex-direction: column;
+    justify-content: $slide-vertical-align;
+    align-items: $slide-horizontal-align;
     flex-grow: 0;
     flex-shrink: 0;
     overflow: hidden;
     max-width: $slide-max-width; //=> don't let slides be wider than the viewport
     flex-basis: $slide-width; //=> optional fixed slide width (px or % of viewport)
     height: $slide-height; //=> optional fixed slide height
+    background: $slide-background;
+    color: $slide-text-color;
+
+    &[data-slide-background] {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    &-overlay {
+        display: flex;
+        flex-direction: column;
+        justify-content: $slide-vertical-align;
+        align-items: $slide-horizontal-align;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        background: $slide-background-overlay;
+    }
 
     &-full-width, &-cover-width {
         flex-basis: 100%;

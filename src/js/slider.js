@@ -78,6 +78,7 @@
 
         init: function ()  {
             this.swapSlideCoverImages();
+            this.insertDataBackgrounds();
             this.registerEvents();
             this.evaluateSlider();
 
@@ -99,6 +100,13 @@
                         .css('backgroundImage', 'url(' + imageUrl + ')')
                         .addClass((this.options.slideCoverWrapper).substr(1));
                 }
+            }.bind(this));
+        },
+
+        insertDataBackgrounds: function () {
+            this.$slider.find(this.options.slide + '[data-slide-background]').each(function (index, slide) {
+                var $slide = $(slide);
+                $slide.css('backgroundImage', 'url(' + $slide.data('slide-background') + ')');
             }.bind(this));
         },
 
