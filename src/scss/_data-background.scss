@@ -2,7 +2,7 @@
 
 .slide {
 
-    &-background {
+    &-data-background {
         display: block;
         position: absolute;
         top: 0;
@@ -16,7 +16,7 @@
         transition: transform $slide-data-background-zoom-speed;
     }
 
-    &:hover &-zoom-background {
+    &:hover &-data-zoom-background {
         transform: $slide-data-background-zoom-effect;
     }
 

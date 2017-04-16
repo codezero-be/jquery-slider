@@ -6,24 +6,27 @@
             slideSpeed: 500,
             enableSwipe: true,
 
-            // If you change class names,
+            // If you change class / data attribute names,
             // you will need to change related CSS files
             viewport: '.slider-viewport',
             track: '.slider-track',
             slide: '.slide',
+            // Arrows
             prevArrow: '.slider-prev',
             nextArrow: '.slider-next',
+            // Slider state
             atLastSlide: '.slider-end',
             atFirstSlide: '.slider-start',
             noSlide: '.no-slide',
-            slideImageContainer: '.slide-image',
-            slideCover: '.slide-cover',
-            slideCoverWrapper: '.slide-cover-wrapper',
-            backgroundClass: '.slide-background',
-            backgroundZoomClass: '.slide-zoom-background',
+            // Slide image classes
+            imageContainerClass: '.slide-image',
+            imageAsBackgroundClass: '.slide-image-background',
+            imageAsBackgroundWrapperClass: '.slide-image-background-wrapper',
+            // Slide background classes / data attributes
+            backgroundClass: '.slide-data-background',
+            backgroundZoomClass: '.slide-data-zoom-background',
             backgroundDataAttr: 'background',
             backgroundZoomDataAttr: 'zoom-background',
-
 
             // Check if we should enable single slide mode..
             // Return true to scroll only one slide or false to slide the default distance.
@@ -98,15 +101,15 @@
         },
 
         swapSlideCoverImages: function () {
-            this.$slider.find('img' + this.options.slideCover).each(function (index, image) {
+            this.$slider.find('img' + this.options.imageAsBackgroundClass).each(function (index, image) {
                 var $image = $(image),
-                    $container = $image.closest(this.options.slideImageContainer),
+                    $container = $image.closest(this.options.imageContainerClass),
                     imageUrl = $image.prop('src');
 
                 if (imageUrl) {
                     $container
                         .css('backgroundImage', 'url(' + imageUrl + ')')
-                        .addClass((this.options.slideCoverWrapper).substr(1));
+                        .addClass((this.options.imageAsBackgroundWrapperClass).substr(1));
                 }
             }.bind(this));
         },

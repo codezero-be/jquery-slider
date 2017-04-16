@@ -3,7 +3,7 @@
 // This is just an example.
 // You can style the image any way you like.
 
-@if $default-slide-image-styles == true {
+@if $include-default-slide-image-styles == true {
 
     .slide {
 
@@ -14,7 +14,7 @@
             transition: transform $slide-image-scale-speed;
             text-align: $slide-image-text-align;
 
-            &-zoom {
+            &-hoverlay {
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -25,11 +25,21 @@
                 z-index: 10;
                 width: 0;
                 overflow: hidden;
-                color: $slide-zoom-color;
-                font-size: $slide-zoom-font-size;
-                background: $slide-zoom-background;
-                transition: opacity $slide-zoom-fade-in-speed, width 0ms linear $slide-zoom-fade-in-speed;
+                color: $slide-image-hoverlay-color;
+                font-size: $slide-image-hoverlay-font-size;
+                background: $slide-image-hoverlay-background;
+                transition: opacity $slide-image-hoverlay-fade-in-speed, width 0ms linear $slide-image-hoverlay-fade-in-speed;
                 opacity: 0;
+            }
+
+            &:hover {
+                transform: $slide-image-scale-hover;
+            }
+
+            &:hover &-hoverlay {
+                transition: opacity $slide-image-hoverlay-fade-in-speed, width 0ms linear 0ms;
+                width: 100%;
+                opacity: 1;
             }
 
             img {
@@ -38,29 +48,19 @@
                 max-height: $slide-image-max-height;
             }
 
-            &:hover {
-                transform: $slide-image-scale-hover;
+            &-background-wrapper {
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center center;
             }
 
-            &:hover &-zoom {
-                transition: opacity $slide-zoom-fade-in-speed, width 0ms linear 0ms;
-                width: 100%;
-                opacity: 1;
+            &-background-wrapper &-background {
+                opacity: 0;
             }
         }
 
         &-cover-width &-image {
             width: 100%;
-        }
-
-        &-cover-wrapper {
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center center;
-
-            img.slide-cover {
-                opacity: 0;
-            }
         }
     }
 
