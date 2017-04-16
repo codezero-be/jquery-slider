@@ -391,7 +391,7 @@
 
 <h3>Content slider</h3>
 <p>
-    Use the <code>data-slide-background</code> attribute to set a background image on the <code>.slide</code>.<br>
+    Use the <code>data-background</code> attribute on the <code>.slide</code> to set a background image.<br>
     An optional <code>.slide-overlay</code> wrapper around your content will add a configurable
     overlay over the background image to make it darker, lighter, ...
 </p>
@@ -405,16 +405,16 @@
     <div class="slider-viewport">
         <div class="slider-track">
 
-            <div class="slide" data-slide-background="https://unsplash.it/600/300/">
+            <div class="slide" data-zoom-background="https://unsplash.it/600/300/">
                 <div class="slide-overlay">
                     <h1>Hello World</h1>
-                    <p>With overlay!</p>
+                    <p>With overlay and zoom!</p>
                 </div>
             </div>
 
-            <div class="slide" data-slide-background="https://unsplash.it/500/300/">
+            <div class="slide" data-background="https://unsplash.it/500/300/">
                 <h1>Hello Universe</h1>
-                <p>Without overlay!</p>
+                <p>Without overlay and zoom!</p>
             </div>
 
         </div>
@@ -432,16 +432,16 @@
     <div class="slider-viewport">
         <div class="slider-track">
 
-            <div class="slide" data-slide-background="https://unsplash.it/600/300/">
-                <div class="slide-overlay">
+            <div class="slide" data-zoom-background="https://unsplash.it/600/300/">
+                <div class="slide-overlay" style="padding: 0 1em;">
                     <h1>Hello World</h1>
-                    <p>With overlay!</p>
+                    <p>With overlay and zoom!</p>
                 </div>
             </div>
 
-            <div class="slide" data-slide-background="https://unsplash.it/500/300/">
+            <div class="slide" data-background="https://unsplash.it/500/300/" style="padding: 0 1em;">
                 <h1>Hello Universe</h1>
-                <p>Without overlay!</p>
+                <p>Without overlay and zoom!</p>
             </div>
 
         </div>

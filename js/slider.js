@@ -72,22 +72,29 @@
 
 (function ($, window, document, undefined) {
 
-    var pluginName = "slide",
+    var pluginName = 'slide',
         defaults = {
         // General settings...
-        viewport: ".slider-viewport",
-        track: ".slider-track",
-        slide: ".slide",
-        prevArrow: ".slider-prev",
-        nextArrow: ".slider-next",
-        atLastSlide: ".slider-end",
-        atFirstSlide: ".slider-start",
-        noSlide: ".no-slide",
-        slideImageContainer: ".slide-image",
-        slideCover: ".slide-cover",
-        slideCoverWrapper: ".slide-cover-wrapper",
         slideSpeed: 500,
         enableSwipe: true,
+
+        // If you change class names,
+        // you will need to change related CSS files
+        viewport: '.slider-viewport',
+        track: '.slider-track',
+        slide: '.slide',
+        prevArrow: '.slider-prev',
+        nextArrow: '.slider-next',
+        atLastSlide: '.slider-end',
+        atFirstSlide: '.slider-start',
+        noSlide: '.no-slide',
+        slideImageContainer: '.slide-image',
+        slideCover: '.slide-cover',
+        slideCoverWrapper: '.slide-cover-wrapper',
+        backgroundClass: '.slide-background',
+        backgroundZoomClass: '.slide-zoom-background',
+        backgroundDataAttr: 'background',
+        backgroundZoomDataAttr: 'zoom-background',
 
         // Check if we should enable single slide mode..
         // Return true to scroll only one slide or false to slide the default distance.
@@ -174,9 +181,21 @@
         },
 
         insertDataBackgrounds: function insertDataBackgrounds() {
-            this.$slider.find(this.options.slide + '[data-slide-background]').each(function (index, slide) {
-                var $slide = $(slide);
-                $slide.css('backgroundImage', 'url(' + $slide.data('slide-background') + ')');
+            this.$slider.find(this.options.slide).each(function (index, slide) {
+                var $slide = $(slide),
+                    $background,
+                    backgroundUrl = $slide.data(this.options.backgroundDataAttr) || $slide.data(this.options.backgroundZoomDataAttr),
+                    shouldZoom = !!$slide.data(this.options.backgroundZoomDataAttr);
+
+                if (backgroundUrl) {
+                    $background = $('<div/>').addClass(this.options.backgroundClass.substr(1)).css('backgroundImage', 'url(' + backgroundUrl + ')');
+
+                    if (shouldZoom) {
+                        $background.addClass(this.options.backgroundZoomClass.substr(1));
+                    }
+
+                    $slide.prepend($background);
+                }
             }.bind(this));
         },
 
