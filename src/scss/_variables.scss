@@ -75,10 +75,15 @@ $default-slide-image-styles: true !default;
 // if $slide-height is set to auto.
 $slide-image-max-height: $slide-height !default; //=> choose: none or any value
 
+// scale the image on hover
+$slide-image-scale-hover: scale(1.1) !default;
+$slide-image-scale-speed: 300ms !default;
+
 // text align inside .slide-image
 $slide-image-text-align: center !default; //=> choose: left, center, right
 
-// zoom icon styles
+// zoom overlay styles
 $slide-zoom-color: rgba(255,255,255,.8) !default;
 $slide-zoom-background: rgba(0,0,0,.3) !default;
 $slide-zoom-font-size: 30px !default;
+$slide-zoom-fade-in-speed: 400ms !default;

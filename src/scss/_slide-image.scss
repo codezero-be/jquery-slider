@@ -11,7 +11,7 @@
             display: block;
             position: relative;
             overflow: hidden;
-            transition: transform 400ms;
+            transition: transform $slide-image-scale-speed;
             text-align: $slide-image-text-align;
 
             &-zoom {
@@ -28,7 +28,7 @@
                 color: $slide-zoom-color;
                 font-size: $slide-zoom-font-size;
                 background: $slide-zoom-background;
-                transition: opacity 400ms, width 0ms linear 400ms;
+                transition: opacity $slide-zoom-fade-in-speed, width 0ms linear $slide-zoom-fade-in-speed;
                 opacity: 0;
             }
 
@@ -39,11 +39,11 @@
             }
 
             &:hover {
-                transform: scale(1.2);
+                transform: $slide-image-scale-hover;
             }
 
             &:hover &-zoom {
-                transition: opacity 400ms, width 0ms linear 0ms;
+                transition: opacity $slide-zoom-fade-in-speed, width 0ms linear 0ms;
                 width: 100%;
                 opacity: 1;
             }
