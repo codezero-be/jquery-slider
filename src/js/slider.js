@@ -1,22 +1,24 @@
 (function ($, window, document, undefined) {
 
-    var pluginName = "slide",
+    var pluginName = 'slide',
         defaults = {
             // General settings...
-            viewport: ".slider-viewport",
-            track: ".slider-track",
-            slide: ".slide",
-            prevArrow: ".slider-prev",
-            nextArrow: ".slider-next",
-            atLastSlide: ".slider-end",
-            atFirstSlide: ".slider-start",
-            noSlide: ".no-slide",
-            slideImageContainer: ".slide-image",
-            slideCover: ".slide-cover",
-            slideCoverWrapper: ".slide-cover-wrapper",
             slideSpeed: 500,
             enableSwipe: true,
 
+            // If you change class names,
+            // you will need to change related CSS files
+            viewport: '.slider-viewport',
+            track: '.slider-track',
+            slide: '.slide',
+            prevArrow: '.slider-prev',
+            nextArrow: '.slider-next',
+            atLastSlide: '.slider-end',
+            atFirstSlide: '.slider-start',
+            noSlide: '.no-slide',
+            slideImageContainer: '.slide-image',
+            slideCover: '.slide-cover',
+            slideCoverWrapper: '.slide-cover-wrapper',
             // Check if we should enable single slide mode..
             // Return true to scroll only one slide or false to slide the default distance.
             // You can also set this to a boolean instead of a function.
