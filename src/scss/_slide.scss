@@ -15,6 +15,10 @@
     background: $slide-background;
     color: $slide-text-color;
 
+    + .slide {
+        margin-left: $slide-margin;
+    }
+
     &[data-slide-background] {
         background-size: cover;
         background-repeat: no-repeat;

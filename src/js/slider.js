@@ -26,7 +26,7 @@
                     viewportWidth = $slider.find(this.viewport).width();
 
                 $slider.find(this.slide).each(function () {
-                    isInSingleSlideMode = $(this).width() / viewportWidth > .3;
+                    isInSingleSlideMode = $(this).outerWidth() / viewportWidth > .3;
                     return ! isInSingleSlideMode;
                 });
 
@@ -217,8 +217,8 @@
 
             $slides.each(function (index, slide) {
                 var $slide = $(slide),
-                    slideWidth = $slide.width(),
-                    leftOffset = $slide.position().left,
+                    slideWidth = $slide.outerWidth(),
+                    leftOffset = $slide.position().left + parseInt($slide.css("marginLeft")),
                     slideCenterPosition = leftOffset + (slideWidth / 2) - trackOffset,
                     slideCenterIsOverHalfWay = slideCenterPosition - 2 > halfViewportWidth,
                     slideCenterIsBeforeHalfWay = slideCenterPosition + 2 < halfViewportWidth;
@@ -246,7 +246,7 @@
             var width = 0;
 
             this.$slides.each(function () {
-                width += parseFloat($(this).width());
+                width += parseFloat($(this).outerWidth(true));
             });
 
             return width;
@@ -272,11 +272,11 @@
         },
 
         getSlideOverflow: function ($slide) {
-            if ($slide.width() <= this.viewportWidth) {
+            if ($slide.outerWidth() <= this.viewportWidth) {
                 return 0;
             }
 
-            return ($slide.width() - this.viewportWidth) / 2;
+            return ($slide.outerWidth() - this.viewportWidth) / 2;
         },
 
         runBeforeCallback: function (isNext) {
