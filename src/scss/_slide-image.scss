@@ -11,8 +11,37 @@
             display: block;
             position: relative;
             overflow: hidden;
-            transition: transform $slide-image-scale-speed;
             text-align: $slide-image-text-align;
+            transition: transform $slide-image-scale-speed;
+
+            &:hover {
+                transform: $slide-image-scale-hover;
+            }
+
+            &-caption {
+                display: block;
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                z-index: 1;
+                padding: $slide-image-caption-padding;
+                text-decoration: none;
+                font-size: $slide-image-caption-font-size;
+                color: $slide-image-caption-color;
+                background: $slide-image-caption-background;
+                transition: transform $slide-image-caption-speed;
+
+                @if $slide-image-single-line == true {
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+            }
+
+            &:hover &-caption {
+                transform: translateY(100%);
+            }
 
             &-hoverlay {
                 display: flex;
@@ -30,10 +59,6 @@
                 background: $slide-image-hoverlay-background;
                 transition: opacity $slide-image-hoverlay-fade-in-speed, width 0ms linear $slide-image-hoverlay-fade-in-speed;
                 opacity: 0;
-            }
-
-            &:hover {
-                transform: $slide-image-scale-hover;
             }
 
             &:hover &-hoverlay {

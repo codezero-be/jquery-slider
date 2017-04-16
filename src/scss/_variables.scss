@@ -66,6 +66,14 @@ $slide-image-hoverlay-background: rgba(0,0,0,.3) !default;
 $slide-image-hoverlay-font-size: 30px !default;
 $slide-image-hoverlay-fade-in-speed: 400ms !default;
 
+// image caption styles
+$slide-image-caption-color: #ffffff !default;
+$slide-image-caption-background: rgba(0,0,0,.4) !default;
+$slide-image-caption-font-size: 14px !default;
+$slide-image-caption-padding: .8em !default;
+$slide-image-caption-speed: 300ms !default; //=> slide up / down
+$slide-image-single-line: true !default; //=> if true, long captions will be truncated
+
 //
 // Default arrow styles
 //
