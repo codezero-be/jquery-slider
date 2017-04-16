@@ -18,16 +18,25 @@ $slide-horizontal-align: center !default; //=> choose: center, flex-start (left)
 $slide-vertical-align: center !default; //=> choose: center, flex-start (top) or flex-end (bottom)
 
 // slide dimensions and spacing
-$slide-max-width: 100% !default; // choose: none (allow any width), 100% (crop slides to fit viewport) or any other width
 $slide-width: auto !default; // choose: auto or any width (in pixels or percentage of viewport)
+$slide-max-width: 100% !default; // choose: none (allow any width), 100% (crop slides to fit viewport) or any other width
 $slide-height: 200px !default; // choose: auto or any height (in pixels)
 $slide-margin: 0 !default; // space between 2 slides
+
+// slide default text color
+$slide-text-color: #ffffff !default;
 
 // default slide background
 $slide-background: transparent !default; //=> choose: transparent or any value
 
-// slide default text color
-$slide-text-color: #ffffff !default;
+// when using data-background to set background images, the default slide background will be on top of the image
+// set this option to use a different background in this case (like a default overlay color)
+// you can also use $slide-background-overlay with a .slide-overlay in specific slides
+$slide-data-background: transparent !default; //=> choose: transparent or any value
+
+// background zoom when using data-zoom-background
+$slide-data-background-zoom-speed: 300ms !default;
+$slide-data-background-zoom-effect: scale(1.2) !default;
 
 // background for optional slide-overlay div
 // this is meant to be placed in a content slider

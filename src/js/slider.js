@@ -19,6 +19,12 @@
             slideImageContainer: '.slide-image',
             slideCover: '.slide-cover',
             slideCoverWrapper: '.slide-cover-wrapper',
+            backgroundClass: '.slide-background',
+            backgroundZoomClass: '.slide-zoom-background',
+            backgroundDataAttr: 'background',
+            backgroundZoomDataAttr: 'zoom-background',
+
+
             // Check if we should enable single slide mode..
             // Return true to scroll only one slide or false to slide the default distance.
             // You can also set this to a boolean instead of a function.
@@ -106,9 +112,23 @@
         },
 
         insertDataBackgrounds: function () {
-            this.$slider.find(this.options.slide + '[data-slide-background]').each(function (index, slide) {
-                var $slide = $(slide);
-                $slide.css('backgroundImage', 'url(' + $slide.data('slide-background') + ')');
+            this.$slider.find(this.options.slide).each(function (index, slide) {
+                var $slide = $(slide),
+                    $background,
+                    backgroundUrl = $slide.data(this.options.backgroundDataAttr) || $slide.data(this.options.backgroundZoomDataAttr),
+                    shouldZoom = !! $slide.data(this.options.backgroundZoomDataAttr);
+
+                if (backgroundUrl) {
+                    $background = $('<div/>')
+                        .addClass((this.options.backgroundClass).substr(1))
+                        .css('backgroundImage', 'url(' + backgroundUrl + ')');
+
+                    if (shouldZoom) {
+                        $background.addClass((this.options.backgroundZoomClass).substr(1));
+                    }
+
+                    $slide.prepend($background);
+                }
             }.bind(this));
         },
 

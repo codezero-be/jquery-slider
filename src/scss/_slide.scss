@@ -19,12 +19,6 @@
         margin-left: $slide-margin;
     }
 
-    &[data-slide-background] {
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center center;
-    }
-
     &-overlay {
         position: relative;
         display: flex;

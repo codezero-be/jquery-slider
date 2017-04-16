@@ -1,0 +1,27 @@
+@import "variables";
+
+.slide {
+
+    &-background {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        transition: transform $slide-data-background-zoom-speed;
+    }
+
+    &:hover &-zoom-background {
+        transform: $slide-data-background-zoom-effect;
+    }
+
+    &[data-background], &[data-zoom-background] {
+        background: $slide-data-background;
+    }
+
+}
