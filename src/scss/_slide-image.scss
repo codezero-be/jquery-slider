@@ -59,6 +59,7 @@
                 background: $slide-image-hoverlay-background;
                 transition: opacity $slide-image-hoverlay-fade-in-speed, width 0ms linear $slide-image-hoverlay-fade-in-speed;
                 opacity: 0;
+                transform: translateZ(0); //=> avoid flickering
             }
 
             &:hover &-hoverlay {

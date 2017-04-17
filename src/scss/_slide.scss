@@ -14,6 +14,7 @@
     height: $slide-height; //=> optional fixed slide height
     background: $slide-background;
     color: $slide-text-color;
+    transform: translateZ(0); //=> avoid flickering
 
     + .slide {
         margin-left: $slide-margin;
