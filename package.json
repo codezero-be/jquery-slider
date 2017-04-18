@@ -1,7 +1,7 @@
 {
-  "name": "slider",
+  "name": "jquery-slider",
   "version": "1.0.0",
-  "description": "",
+  "description": "Responsive jQuery Slider",
   "main": "src/js/slider.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack --progress --hide-modules",
@@ -9,9 +9,9 @@
     "hot": "cross-env NODE_ENV=development webpack-dev-server --inline --hot",
     "production": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": ["slider", "responsive", "jquery", "swipe", "gallery"],
+  "author": "Ivan Vermeyen",
+  "license": "MIT",
   "devDependencies": {
     "laravel-mix": "^0.10.0"
   }
