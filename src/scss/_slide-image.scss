@@ -13,10 +13,10 @@
             display: block;
             position: relative;
             text-align: $slide-image-text-align;
-            transition: transform $slide-image-scale-speed;
+            transition: transform $slide-image-transform-speed;
 
             &:hover {
-                transform: $slide-image-scale-hover;
+                transform: $slide-image-transform-hover;
             }
 
             &-caption {
