@@ -152,6 +152,7 @@
         this.isInSingleSlideMode = false;
         this.noSlideClass = this.options.noSlide.substr(1);
         this.onResize = null;
+        this.isSliding = false;
 
         // Kickoff...
         this.init();
@@ -284,14 +285,17 @@
         },
 
         slideTo: function slideTo($slides, isNext) {
-            if (this.runBeforeCallback(isNext) === false) {
+            if (this.isSliding || this.runBeforeCallback(isNext) === false) {
                 return false;
             }
+
+            this.isSliding = true;
 
             this.$viewport.scrollTo(this.getSlideToPosition($slides, isNext), this.options.slideSpeed, {
                 onAfter: function () {
                     this.updateArrows();
                     this.runAfterCallback(isNext);
+                    this.isSliding = false;
                 }.bind(this)
             });
         },
