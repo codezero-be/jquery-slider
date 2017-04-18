@@ -6,11 +6,12 @@
 @if $include-default-slide-image-styles == true {
 
     .slide {
+        margin-left: -1px; //=> fix random spacing between slides
+        margin-right: -1px; //=> fix random spacing between slides
 
         &-image {
             display: block;
             position: relative;
-            overflow: hidden;
             text-align: $slide-image-text-align;
             transition: transform $slide-image-scale-speed;
 
