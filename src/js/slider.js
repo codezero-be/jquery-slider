@@ -159,6 +159,11 @@
                 this.$slider.on('swipeleft', function () {
                     this.slideTo(this.$slides, true);
                 }.bind(this));
+
+                // No dragging when "swiping" with the mouse...
+                this.$slider.on('dragstart', 'a, img', function (e) {
+                    e.preventDefault();
+                });
             }
 
             // Window resize event...
