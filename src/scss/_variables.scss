@@ -35,8 +35,8 @@ $slide-background: transparent !default; //=> choose: transparent or any value
 $slide-data-background: transparent !default; //=> choose: transparent or any value
 
 // background zoom when using data-zoom-background
-$slide-data-background-zoom-speed: 300ms !default;
-$slide-data-background-zoom-effect: scale(1.1) !default;
+$slide-data-background-transform-hover: scale(1.1) !default; //=> choose: none or any transform
+$slide-data-background-transform-speed: 300ms !default;
 
 // background for optional slide-overlay div
 // this is meant to be placed in a content slider

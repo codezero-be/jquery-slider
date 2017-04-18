@@ -13,11 +13,11 @@
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
-        transition: transform $slide-data-background-zoom-speed;
+        transition: transform $slide-data-background-transform-speed;
     }
 
     &:hover &-data-zoom-background {
-        transform: $slide-data-background-zoom-effect;
+        transform: $slide-data-background-transform-hover;
     }
 
     &[data-background], &[data-zoom-background] {
