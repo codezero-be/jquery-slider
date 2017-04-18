@@ -232,6 +232,13 @@
                 this.$slider.on('dragstart', 'a, img', function (e) {
                     e.preventDefault();
                 });
+
+                // Don't follow links when swiping (IE 11 & Edge)...
+                this.$slider.on('click', 'a', function (e) {
+                    if (this.isSliding) {
+                        e.preventDefault();
+                    }
+                }.bind(this));
             }
 
             // Window resize event...
