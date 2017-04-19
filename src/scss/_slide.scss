@@ -32,11 +32,8 @@
     }
 
     &-full-width, &-cover-width {
-        flex-basis: 100%;
+        .slide, &.slide {
+            flex-basis: 100%;
+        }
     }
-}
-
-.slider-full-width .slide,
-.slider-cover-width .slide {
-    flex-basis: 100%;
 }
