@@ -20,7 +20,7 @@ $slide-vertical-align: center !default; //=> choose: center, flex-start (top) or
 // slide dimensions and spacing
 $slide-width: auto !default; // choose: auto or any width (in pixels or percentage of viewport)
 $slide-max-width: 100% !default; // choose: none (allow any width), 100% (crop slides to fit viewport) or any other width
-$slide-height: 200px !default; // choose: auto or any height (in pixels)
+$slide-height: auto !default; // choose: auto or any height (in pixels)
 $slide-margin: 0 !default; // space between 2 slides
 
 // slide default text color
@@ -52,6 +52,10 @@ $include-default-slide-image-styles: true !default;
 // the image max height will determine the slider height
 // if $slide-height is set to auto.
 $slide-image-max-height: $slide-height !default; //=> choose: none or any value
+
+@if ($slide-height == auto) {
+    $slide-image-max-height: none !default; //=> choose: none or any value
+}
 
 // zoom the image on hover
 $slide-image-transform-hover: scale(1.1) !default; //=> choose: none or any transform
