@@ -1,0 +1,24 @@
+{
+  "name": "codezero-jquery-slider",
+  "description": "Responsive jQuery Slider",
+  "main": "src/js/slider.js",
+  "authors": [
+    "Ivan Vermeyen"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "slider",
+    "responsive",
+    "jquery",
+    "swipe",
+    "gallery"
+  ],
+  "homepage": "https://github.com/codezero-be/jquery-slider",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
