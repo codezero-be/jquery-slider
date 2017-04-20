@@ -94,7 +94,7 @@ The following snippet is the base skeleton of a slider.
 
 By default, each slide will have an **auto width and height**.
 You can specify a fixed width and height in CSS yourself,
-or [change some variables](src/scss/_variables.scss) if you are compiling SCSS.
+or [change some variables](https://github.com/codezero-be/jquery-slider/blob/master/src/scss/_variables.scss) if you are compiling SCSS.
 
 If you want every slide to take up 100% width of the viewport, simply add the `slide-full-width` class to the `.slider`.
 Or if you want only specific slides to be 100% wide, you can add the `slide-full-width` class to that `.slide`.
@@ -106,11 +106,11 @@ Remember the `.slide` is a `flex` child, so you might want to wrap your content
 in another `<div>` for easier styling or positioning...
 
 ### Slide Backgrounds
-You can [change some variables](src/scss/_variables.scss) to choose default backgrounds for your slides,
+You can [change some variables](https://github.com/codezero-be/jquery-slider/blob/master/src/scss/_variables.scss) to choose default backgrounds for your slides,
 write your own styles or use a `data-background` attribute to set a specific background image on a slide.
 
 If you want the background to zoom in when you hover over it, use `data-zoom-background` instead.
-You can set your own zoom effect in the [variables file](src/scss/_variables.scss),
+You can set your own zoom effect in the [variables file](https://github.com/codezero-be/jquery-slider/blob/master/src/scss/_variables.scss),
 as long as it's a valid CSS `transform` value.
 
 ```html
@@ -138,7 +138,7 @@ The only thing you might want to hook up yourself is any lightbox you prefer.
 
 #### Auto Width Image Slides
 To restrain the image size, you might want to specify a `max-height` for the `<img>`.
-If you set the `$slide-height` [variable in SCSS](src/scss/_variables.scss),
+If you set the `$slide-height` [variable in SCSS](https://github.com/codezero-be/jquery-slider/blob/master/src/scss/_variables.scss),
 this is done automatically.
 
 ```html
@@ -261,10 +261,10 @@ Same as the hoverlay, if you would like to display an image caption, just add th
 ## Options
 If you are using SASS/SCSS, there are a bunch of variables you can tweak to change the behavior of the slider.
 I have added comments, so I hope it will be clear what each option will do.
-Just take a look at the [variables file](src/scss/_variables.scss).
+Just take a look at the [variables file](https://github.com/codezero-be/jquery-slider/blob/master/src/scss/_variables.scss).
 
 The javascript side also has some options. These are also commented so I would again suggest to
-take a look at the `defaults` object in the [javascript source file](src/js/slider.js).
+take a look at the `defaults` object in the [javascript source file](https://github.com/codezero-be/jquery-slider/blob/master/src/js/slider.js).
 
 Overriding the defaults would take the form of:
 
@@ -284,7 +284,7 @@ Make sure you have the latest version of [NodeJS](https://nodejs.org/en/) instal
 - To compile for production (minify/uglify) run `npm run production`.
 
 ## License
-The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+The MIT License (MIT). Please see [License File](https://github.com/codezero-be/jquery-slider/blob/master/LICENSE.md) for more information.
 
 ---
 [![Analytics](https://ga-beacon.appspot.com/UA-58876018-1/codezero-be/jquery-slider)](https://github.com/igrigorik/ga-beacon)
