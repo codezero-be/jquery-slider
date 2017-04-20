@@ -1,5 +1,5 @@
 {
-  "name": "jquery-slider",
+  "name": "codezero-jquery-slider",
   "version": "1.0.0",
   "description": "Responsive jQuery Slider",
   "main": "src/js/slider.js",
