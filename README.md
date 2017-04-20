@@ -1,5 +1,9 @@
 # Responsive jQuery Slider
 
+[![npm](https://img.shields.io/npm/v/codezero-jquery-slider.svg)](https://www.npmjs.com/package/codezero-jquery-slider)
+[![npm](https://img.shields.io/npm/dt/codezero-jquery-slider.svg)](https://www.npmjs.com/package/codezero-jquery-slider)
+[![npm](https://img.shields.io/npm/l/codezero-jquery-slider.svg)](https://www.npmjs.com/package/codezero-jquery-slider)
+
 [View Demo](https://codezero-be.github.io/jquery-slider/) - [Tinker with CodePen](https://codepen.io/ivanvermeyen/pen/yMWvOR)
 
 Is this the best, most advanced slider out there? No, not at all…
