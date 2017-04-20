@@ -41,12 +41,12 @@ But even with all its features, the slider I was using before didn’t do exactl
 
 ### Via Bower
 ```
-Coming soon
+bower install codezero-jquery-slider --save
 ```
 
 ### Via NPM
 ```
-Coming soon
+npm install codezero-jquery-slider --save
 ```
 
 ### Include JS and CSS
