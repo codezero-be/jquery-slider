@@ -25,6 +25,7 @@ But even with all its features, the slider I was using before didn’t do exactl
 - [Usage](#usage)
   - [Basic Setup](#basic-setup)
   - [Slide Backgrounds](#slide-backgrounds)
+  - [Slide Overlays](#slide-overlays)
   - [Image Slides](#image-slides)
     - [Auto Width Image Slides](#auto-width-image-slides)
     - [Full Width Image Slides](#full-width-image-slides)
@@ -128,6 +129,30 @@ as long as it's a valid CSS `transform` value.
 
             <div class="slide" data-background="path/to/bg-image.jpg">
                 <!-- Slide Content -->
+            </div>
+
+        </div>
+    </div>
+
+</div>
+```
+
+### Slide Overlays
+To add a color overlay on top of the background image, wrap your slide content in a `<div>` with the `slide-overlay` class.
+
+```html
+<div class="slider slide-full-width">
+
+    <a href="#" class="slider-prev">&langle;</a>
+    <a href="#" class="slider-next">&rangle;</a>
+
+    <div class="slider-viewport">
+        <div class="slider-track">
+
+            <div class="slide" data-background="path/to/bg-image.jpg">
+                <div class="slide-overlay">
+                    <!-- Slide Content -->
+                </div>
             </div>
 
         </div>
