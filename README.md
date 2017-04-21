@@ -34,6 +34,7 @@ But even with all its features, the slider I was using before didn’t do exactl
     - [Image Caption](#image-caption)
 - [Options](#options)
 - [Development](#development)
+- [Changelog](#changelog)
 - [License](#license)
 
 ## Requirements
@@ -311,6 +312,10 @@ Make sure you have the latest version of [NodeJS](https://nodejs.org/en/) instal
 - To compile run `npm run dev`.
 - To compile and watch for changes run `npm run watch`.
 - To compile for production (minify/uglify) run `npm run production`.
+
+## Changelog
+
+View the [changelog](https://github.com/codezero-be/jquery-slider/blob/master/CHANGELOG.md).
 
 ## License
 The MIT License (MIT). Please see [License File](https://github.com/codezero-be/jquery-slider/blob/master/LICENSE.md) for more information.
