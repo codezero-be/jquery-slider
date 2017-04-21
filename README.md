@@ -57,7 +57,7 @@ npm install codezero-jquery-slider --save
 ### Include JS and CSS
 ```html
 <!-- Important slider styling -->
-<link rel="stylesheet" href="css/slider.css">
+<link rel="stylesheet" href="css/slider.min.css">
 
 <!-- Required 3rd party scripts -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -65,7 +65,7 @@ npm install codezero-jquery-slider --save
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-touch-events/1.0.8/jquery.mobile-events.js"></script>
 
 <!-- Slider script -->
-<script src="js/slider.js"></script>
+<script src="js/slider.min.js"></script>
 
 <!-- Kickoff the slider -->
 <script>
