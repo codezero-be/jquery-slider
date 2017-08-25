@@ -1,6 +1,6 @@
 {
   "name": "codezero-jquery-slider",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Responsive jQuery Slider",
   "main": "src/js/slider.js",
   "scripts": {
